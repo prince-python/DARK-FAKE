@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%for message in messages%}
+{%if message%}
+<script>
+    alert("{{message}}");
+</script>
+{%endif%}
+{%endfor%}
+
+{%block content%}
+<div class="rounded bg-white shadow-lg  mt-5 p-5 " >
+            <form action='../ccsearch/' method='post'>
+                {% csrf_token %}
+            <input type="number" class="form-control shadow-lg bg-white text-black rounded rounded-4"  required autofocus name="value" placeholder="Enter value how much credit card want"><br>
+            <center><button style="width:150px"  class="bg-white text-center text-black border-black  shadow-lg rounded rounded-4" id="search-addon"  >
+                GO
+            </button></center>
+        </form>
+        </div>
+
+<center><div class=" h-75 w-75 p-4 mt-5 row shadow-lg">
+  {% for i in k%}
+<div class=" mt-5 col-4 text-black shadow-lg  rounded rounded-5 p-5">
+   {{i}}
+</div>
+{% endfor %}
+</div></center>
+
+        
+
+
+{%endblock%}

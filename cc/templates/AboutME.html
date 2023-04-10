@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{%for message in messages%}
+{%if message%}
+<script>
+    alert("{{message}}");
+</script>
+{%endif%}
+{%endfor%}
+
+{%block content%}
+<div class="rounded bg-white shadow-lg  mt-5 p-5 " >
+            <form action='../fprofile/' method='post'>
+                {% csrf_token %}
+            <input type="number" class="form-control shadow-lg bg-white text-black rounded rounded-4" required autofocus   name="value" placeholder="Enter value how much Profile"><br>
+            <center><button style="width:150px"  class="bg-white text-center text-black border-black  shadow-lg rounded rounded-4" id="search-addon"  >
+                GO
+            </button></center>
+        </form>
+        </div>
+
+<center><div class=" h-75 w-75 p-4 mt-5 row  shadow-lg">
+  {% for i in D %}
+<div class=" mt-5 col-4 text-black shadow-lg rounded rounded-4 p-4">
+    <h5>Gender:{{ i.sex}}</h5><br>
+    <h5>Name:{{ i.name }}</h5><br>
+   <h5>UserName:{{ i.username }}</h5><br>
+   <h5>Address:{{ i.address}}</h5><br>
+   <h5>Gender:{{ i.mail}}</h5><br>
+   <h5>Gender:{{ i.birthdate}}</h5><br>
+
+</div>
+{% endfor %}
+</div></center>
+
+        
+
+
+{%endblock%}
