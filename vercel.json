@@ -7,8 +7,8 @@
     ],
     "routes": [
         {
-            "src": "ccgenerator/(.*)",
-            "dest": "wetherapp/wsgi.py"
+            "src": "/(.*)",
+            "dest": "ccgenerator/wsgi.py"
         }
     ]
 }
