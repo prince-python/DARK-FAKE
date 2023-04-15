@@ -11,7 +11,7 @@
 <div class="rounded bg-white shadow-lg  mt-5 p-5 " >
             <form action='../fprofile/' method='post'>
                 {% csrf_token %}
-            <input type="number" class="form-control shadow-lg bg-white text-black rounded rounded-4" required autofocus   name="value" placeholder="Enter value how much Profile"><br>
+            <input type="text" maxlength="3" class="form-control shadow-lg bg-white text-black rounded rounded-4" required autofocus   name="value" placeholder="Enter value how much Profile"><br>
             <center><button style="width:150px"  class="bg-white text-center text-black border-black  shadow-lg rounded rounded-4" id="search-addon"  >
                 GO
             </button></center>
